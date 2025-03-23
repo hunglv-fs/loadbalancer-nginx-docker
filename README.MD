@@ -20,13 +20,13 @@ This project demonstrates how to set up a load balancer using Nginx within a Doc
     git clone https://github.com/hunglv-fs/loadbalancer-nginx-docker.git
     cd loadbalancer-nginx-docker
     ```
-
-2. Build and start the services:
+2. Copy backend/.env.example to backend/.env
+3. Build and start the services:
     ```bash
     docker-compose up --build
     ```
 
-3. Access the load balancer at `http://localhost:8080`.
+4. Access the load balancer at `http://localhost:8080`.
 
 ## Project Structure
 
