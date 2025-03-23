@@ -1,0 +1,17 @@
+{
+    "name": "loadbalancer-nginx",
+    "version": "1.0.0",
+    "description": "Load Balancer with Nginx",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "John Doe",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "jsonwebtoken": "^9.0.2"
+    }
+}

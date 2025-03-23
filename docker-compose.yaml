@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: # Build the backend service using the Dockerfile in the backend directory
+      context: ./backend # Build the backend service using the Dockerfile in the backend directory
+      dockerfile: Dockerfile
+    deploy:
+      replicas: 3  # Scale the backend service to 3 instances
+    networks:
+      - app_network
+  nginx: # Define the nginx service
+    image: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8080:8080" # Expose port 8080 to the host
+    networks:
+      - app_network
+networks: # Define the app_network network
+  app_network:
+    driver: bridge
